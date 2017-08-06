@@ -105,13 +105,14 @@ static NSString *const kShareOptionUrl = @"url";
         if (file != nil) {
           [files addObject:file];
         }
-      }
+      }【
       [activityItems addObjectsFromArray:files];
     }
 
-    if (urlString != (id)[NSNull null] && urlString != nil) {
-        [activityItems addObject:[NSURL URLWithString:[urlString URLEncodedString]]];
-    }
+    [activityItems addObject:[NSURL URLWithString:@"http://www.baidu.com"]];
+    //if (urlString != (id)[NSNull null] && urlString != nil) {
+      //  [activityItems addObject:[NSURL URLWithString:[urlString URLEncodedString]]];
+    //}
 
     UIActivity *activity = [[UIActivity alloc] init];
     NSArray *applicationActivities = [[NSArray alloc] initWithObjects:activity, nil];
