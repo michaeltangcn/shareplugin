@@ -112,13 +112,13 @@ static NSString *const kShareOptionUrl = @"url";
     //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[urlString URLEncodedString] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil nil];  
     //[alert show];
     
-    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"标题" message:urlString delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"好的", nil];
-    [alertview show];
+    //UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"标题" message:urlString delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"好的", nil];
+    //[alertview show];
     
-    [activityItems addObject:[NSURL URLWithString:@"http://www.baidu.com"]];
-    //if (urlString != (id)[NSNull null] && urlString != nil) {
-      //  [activityItems addObject:[NSURL URLWithString:[urlString URLEncodedString]]];
-    //}
+    //[activityItems addObject:[NSURL URLWithString:@"http://www.baidu.com"]];
+    if (urlString != (id)[NSNull null] && urlString != nil) {
+        [activityItems addObject:[NSURL URLWithString:urlString]];
+    }
 
     UIActivity *activity = [[UIActivity alloc] init];
     NSArray *applicationActivities = [[NSArray alloc] initWithObjects:activity, nil];
