@@ -117,7 +117,8 @@ static NSString *const kShareOptionUrl = @"url";
     
     //[activityItems addObject:[NSURL URLWithString:@"http://www.baidu.com"]];
     if (urlString != (id)[NSNull null] && urlString != nil) {
-        [activityItems addObject:[NSURL URLWithString:urlString]];
+       // [activityItems addObject:[NSURL URLWithString:urlString]];
+       [activityItems addObject:[NSURL URLWithString:[urlString URLEncodedString]]];
     }
 
     UIActivity *activity = [[UIActivity alloc] init];
