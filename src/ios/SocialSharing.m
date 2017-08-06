@@ -109,6 +109,9 @@ static NSString *const kShareOptionUrl = @"url";
       [activityItems addObjectsFromArray:files];
     }
 
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[urlString URLEncodedString] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil nil];  
+    [alert show];
+    
     [activityItems addObject:[NSURL URLWithString:@"http://www.baidu.com"]];
     //if (urlString != (id)[NSNull null] && urlString != nil) {
       //  [activityItems addObject:[NSURL URLWithString:[urlString URLEncodedString]]];
