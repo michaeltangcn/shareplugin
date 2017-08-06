@@ -105,7 +105,7 @@ static NSString *const kShareOptionUrl = @"url";
         if (file != nil) {
           [files addObject:file];
         }
-      }【
+      }
       [activityItems addObjectsFromArray:files];
     }
 
